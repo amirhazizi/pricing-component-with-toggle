@@ -1,0 +1,31 @@
+// import variables
+@import "./variables";
+// fonts
+// import fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+// reset style
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+}
+// global style
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
