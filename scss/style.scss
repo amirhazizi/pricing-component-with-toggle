@@ -15,13 +15,14 @@ body {
 .header {
   display: grid;
   margin-top: 3rem;
-  gap: 3rem 0;
+  gap: 2.5rem 0;
   text-align: center;
   &-content {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 0 1.5rem;
+    align-items: center;
+
     h2 {
       color: $cl-LightGrayishBlue;
       font-size: 1rem;
@@ -32,6 +33,8 @@ body {
       width: 3.5rem;
       border-radius: $radius-3;
       background: $gradient;
+      cursor: pointer;
+      transition: $transition-2;
       input {
         display: none;
       }
@@ -49,6 +52,9 @@ body {
       input:checked + span {
         transform: translate(20%, 15%);
       }
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }
@@ -64,7 +70,6 @@ main {
       text-align: center;
       border-radius: $radius-2;
       padding: 2rem;
-
       .card-header {
         color: inherit;
         margin-bottom: 1.5rem;
@@ -90,6 +95,7 @@ main {
       .card-btn {
         font-family: inherit;
         font-weight: inherit;
+        border: 1px solid transparent;
         width: 100%;
         margin-top: 2rem;
         color: white;
@@ -98,14 +104,23 @@ main {
         letter-spacing: 0.1rem;
         padding: 0.9rem 0;
         border-radius: $radius-1;
+        transition: $transition-2;
       }
     }
-    .card-1 {
+    .card-1,
+    .card-3 {
       @extend #card;
       background: white;
       color: $cl-DarkGrayishBlue;
       .card-btn {
         background: $gradient;
+        &:hover {
+          border-color: $cl-DarkGrayishBlue;
+          color: $cl-DarkGrayishBlue;
+          background: $gradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
       }
     }
     .card-2 {
@@ -115,14 +130,12 @@ main {
       .card-btn {
         background: white;
         color: $cl-DarkGrayishBlue;
-      }
-    }
-    .card-3 {
-      @extend #card;
-      background: white;
-      color: $cl-DarkGrayishBlue;
-      .card-btn {
-        background: $gradient;
+
+        &:hover {
+          border-color: white;
+          color: white;
+          background: $gradient;
+        }
       }
     }
   }
@@ -132,4 +145,4 @@ main {
 @import "./components/footer";
 
 // queries
-@import "./utils/-queries.scss";
+@import "./utils/queries.scss";

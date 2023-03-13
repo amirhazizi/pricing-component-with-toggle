@@ -16,7 +16,6 @@ button {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
-  border: none;
   text-decoration: none;
 }
 
@@ -45,14 +44,14 @@ body {
 .header {
   display: grid;
   margin-top: 3rem;
-  gap: 3rem 0;
+  gap: 2.5rem 0;
   text-align: center;
 }
 .header-content {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 0 1.5rem;
+  align-items: center;
 }
 .header-content h2 {
   color: hsl(234, 14%, 74%);
@@ -64,6 +63,8 @@ body {
   width: 3.5rem;
   border-radius: 25px;
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
 }
 .header-content .checkbox-slider input {
   display: none;
@@ -82,6 +83,9 @@ body {
 .header-content .checkbox-slider input:checked + span {
   transform: translate(20%, 15%);
 }
+.header-content .checkbox-slider:hover {
+  opacity: 0.5;
+}
 
 main {
   width: min(85vw, 1140px);
@@ -91,16 +95,19 @@ main .cards-container {
   gap: 2rem;
   padding: 5rem 0;
 }
-main .cards-container #card, main .cards-container .card-3, main .cards-container .card-2, main .cards-container .card-1 {
+main .cards-container #card, main .cards-container .card-2, main .cards-container .card-1,
+main .cards-container .card-3 {
   text-align: center;
   border-radius: 10px;
   padding: 2rem;
 }
-main .cards-container #card .card-header, main .cards-container .card-3 .card-header, main .cards-container .card-2 .card-header, main .cards-container .card-1 .card-header {
+main .cards-container #card .card-header, main .cards-container .card-2 .card-header, main .cards-container .card-1 .card-header,
+main .cards-container .card-3 .card-header {
   color: inherit;
   margin-bottom: 1.5rem;
 }
-main .cards-container #card .card-cast, main .cards-container .card-3 .card-cast, main .cards-container .card-2 .card-cast, main .cards-container .card-1 .card-cast {
+main .cards-container #card .card-cast, main .cards-container .card-2 .card-cast, main .cards-container .card-1 .card-cast,
+main .cards-container .card-3 .card-cast {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,17 +117,21 @@ main .cards-container #card .card-cast, main .cards-container .card-3 .card-cast
   color: inherit;
   border-bottom: 1px solid #d0d2dc;
 }
-main .cards-container #card .card-cast span, main .cards-container .card-3 .card-cast span, main .cards-container .card-2 .card-cast span, main .cards-container .card-1 .card-cast span {
+main .cards-container #card .card-cast span, main .cards-container .card-2 .card-cast span, main .cards-container .card-1 .card-cast span,
+main .cards-container .card-3 .card-cast span {
   font-size: 5rem;
 }
-main .cards-container #card p, main .cards-container .card-3 p, main .cards-container .card-2 p, main .cards-container .card-1 p {
+main .cards-container #card p, main .cards-container .card-2 p, main .cards-container .card-1 p,
+main .cards-container .card-3 p {
   padding: 1.1rem 0;
   border-bottom: 1px solid #d0d2dc;
   color: inherit;
 }
-main .cards-container #card .card-btn, main .cards-container .card-3 .card-btn, main .cards-container .card-2 .card-btn, main .cards-container .card-1 .card-btn {
+main .cards-container #card .card-btn, main .cards-container .card-2 .card-btn, main .cards-container .card-1 .card-btn,
+main .cards-container .card-3 .card-btn {
   font-family: inherit;
   font-weight: inherit;
+  border: 1px solid transparent;
   width: 100%;
   margin-top: 2rem;
   color: white;
@@ -129,13 +140,24 @@ main .cards-container #card .card-btn, main .cards-container .card-3 .card-btn, 
   letter-spacing: 0.1rem;
   padding: 0.9rem 0;
   border-radius: 5px;
+  transition: all 250ms ease-in-out;
 }
-main .cards-container .card-1 {
+main .cards-container .card-1,
+main .cards-container .card-3 {
   background: white;
   color: hsl(232, 13%, 33%);
 }
-main .cards-container .card-1 .card-btn {
+main .cards-container .card-1 .card-btn,
+main .cards-container .card-3 .card-btn {
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+main .cards-container .card-1 .card-btn:hover,
+main .cards-container .card-3 .card-btn:hover {
+  border-color: hsl(232, 13%, 33%);
+  color: hsl(232, 13%, 33%);
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 main .cards-container .card-2 {
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
@@ -145,11 +167,9 @@ main .cards-container .card-2 .card-btn {
   background: white;
   color: hsl(232, 13%, 33%);
 }
-main .cards-container .card-3 {
-  background: white;
-  color: hsl(232, 13%, 33%);
-}
-main .cards-container .card-3 .card-btn {
+main .cards-container .card-2 .card-btn:hover {
+  border-color: white;
+  color: white;
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
 
