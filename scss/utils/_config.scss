@@ -19,6 +19,8 @@ button {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: none;
+  text-decoration: none;
 }
 
 ul {
@@ -28,4 +30,9 @@ ul {
 html {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
+}
+
+h1,
+h3 {
+  color: $cl-GrayishBlue;
 }

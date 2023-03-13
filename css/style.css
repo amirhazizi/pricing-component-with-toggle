@@ -16,6 +16,8 @@ button {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: none;
+  text-decoration: none;
 }
 
 ul {
@@ -25,6 +27,130 @@ ul {
 html {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
+}
+
+h1,
+h3 {
+  color: hsl(233, 13%, 49%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: url("../images/bg-top.svg") top -2.5rem right -13rem/contain no-repeat;
+  background-color: hsl(240, 78%, 98%);
+}
+
+.header {
+  display: grid;
+  margin: 5rem 0;
+  margin-top: 3rem;
+  gap: 3rem 0;
+  text-align: center;
+}
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1.5rem;
+}
+.header-content h2 {
+  color: hsl(234, 14%, 74%);
+  font-size: 1rem;
+}
+.header-content .checkbox-slider {
+  position: relative;
+  height: 2rem;
+  width: 3.5rem;
+  border-radius: 25px;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+.header-content .checkbox-slider input {
+  display: none;
+}
+.header-content .checkbox-slider span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(110%, 15%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 75px;
+  background: white;
+  transition: all 350ms ease-in-out;
+}
+.header-content .checkbox-slider input:checked + span {
+  transform: translate(20%, 15%);
+}
+
+main {
+  width: min(85vw, 1240px);
+}
+main .cards-container {
+  display: grid;
+  gap: 2rem;
+}
+main .cards-container #card, main .cards-container .card-3, main .cards-container .card-2, main .cards-container .card-1 {
+  text-align: center;
+  border-radius: 10px;
+  padding: 2rem;
+}
+main .cards-container #card .card-header, main .cards-container .card-3 .card-header, main .cards-container .card-2 .card-header, main .cards-container .card-1 .card-header {
+  color: inherit;
+  margin-bottom: 1.5rem;
+}
+main .cards-container #card .card-cast, main .cards-container .card-3 .card-cast, main .cards-container .card-2 .card-cast, main .cards-container .card-1 .card-cast {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 3rem;
+  color: inherit;
+  border-bottom: 1px solid #d0d2dc;
+}
+main .cards-container #card .card-cast span, main .cards-container .card-3 .card-cast span, main .cards-container .card-2 .card-cast span, main .cards-container .card-1 .card-cast span {
+  font-size: 5rem;
+}
+main .cards-container #card p, main .cards-container .card-3 p, main .cards-container .card-2 p, main .cards-container .card-1 p {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid #d0d2dc;
+  color: inherit;
+}
+main .cards-container #card .card-btn, main .cards-container .card-3 .card-btn, main .cards-container .card-2 .card-btn, main .cards-container .card-1 .card-btn {
+  font-family: inherit;
+  font-weight: inherit;
+  width: 100%;
+  margin-top: 2rem;
+  color: white;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 0.9rem 0;
+  border-radius: 5px;
+}
+main .cards-container .card-1 {
+  background: white;
+  color: hsl(232, 13%, 33%);
+}
+main .cards-container .card-1 .card-btn {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+main .cards-container .card-2 {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+}
+main .cards-container .card-2 .card-btn {
+  background: white;
+  color: hsl(232, 13%, 33%);
+}
+main .cards-container .card-3 {
+  background: white;
+  color: hsl(232, 13%, 33%);
+}
+main .cards-container .card-3 .card-btn {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
 
 footer {
@@ -45,7 +171,7 @@ footer {
 .attribution a {
   font-weight: bold;
   color: hsl(232, 13%, 33%);
-  transition: all 350ms linear;
+  transition: all 250ms ease-in-out;
   padding: 0 0.2rem;
 }
 .attribution a:hover {

@@ -2,7 +2,7 @@
 
 // Primary
 
-$gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$gradient: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 
 // Neutral
 
@@ -16,4 +16,6 @@ $radius-1: 5px;
 $radius-2: 10px;
 $radius-3: 25px;
 $radius-4: 75px;
-$transition: all 350ms linear;
+$transition-1: all 150ms ease-in-out;
+$transition-2: all 250ms ease-in-out;
+$transition-3: all 350ms ease-in-out;
