@@ -88,7 +88,7 @@ body {
 }
 
 main {
-  width: min(85vw, 1040px);
+  width: min(85vw, 1100px);
 }
 main .cards-container {
   display: grid;
@@ -205,7 +205,7 @@ footer {
 }
 @media (min-width: 1024px) {
   body {
-    background: url("../images/bg-top.svg") top -2.5rem right -13rem/contain no-repeat, url("../images/bg-bottom.svg") bottom left/20% no-repeat;
+    background: url("../images/bg-top.svg") top -1rem right/25% no-repeat, url("../images/bg-bottom.svg") bottom left/20% no-repeat;
   }
   main .cards-container {
     grid-template-columns: 1fr 1fr 1fr;
