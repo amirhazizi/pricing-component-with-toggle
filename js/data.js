@@ -1,4 +1,4 @@
-export default data = [
+const data = [
   // aunnually
   {
     base: 199.99,
@@ -12,3 +12,4 @@ export default data = [
     master: 39.99,
   },
 ]
+export default data
