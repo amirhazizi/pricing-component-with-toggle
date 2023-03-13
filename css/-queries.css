@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+  main .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    background: url("../images/bg-top.svg") top -2.5rem right -13rem/contain no-repeat, url("../images/bg-bottom.svg") bottom left/20% no-repeat;
+  }
+  main .cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 43rem;
+    gap: 0;
+    align-items: center;
+    filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.131));
+  }
+  main .cards-container .card-2 {
+    align-self: stretch;
+    display: grid;
+    align-content: center;
+  }
+}

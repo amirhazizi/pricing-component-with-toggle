@@ -14,11 +14,9 @@ body {
 // header
 .header {
   display: grid;
-  margin: 5rem 0;
   margin-top: 3rem;
   gap: 3rem 0;
   text-align: center;
-
   &-content {
     display: flex;
     justify-content: center;
@@ -54,12 +52,14 @@ body {
     }
   }
 }
+
 // main
 main {
-  width: min(85vw, 1240px);
+  width: min(85vw, 1140px);
   .cards-container {
     display: grid;
     gap: 2rem;
+    padding: 5rem 0;
     #card {
       text-align: center;
       border-radius: $radius-2;
@@ -127,5 +127,9 @@ main {
     }
   }
 }
+
 // footer
 @import "./components/footer";
+
+// queries
+@import "./utils/-queries.scss";
